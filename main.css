@@ -1,0 +1,40 @@
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
+
+html {
+    font-family: arial;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+h3 {
+    line-height: 0.75;
+}
+
+h4 {
+    margin: 0;
+}
+
+#wrap {
+    width: 100%;
+}
+
+#row-1 {
+    float: left;
+    width: 45%;
+}
+
+#row-2 {
+    float: left;
+    width: 100px;
+}
+
+#row-3 {
+    float: left;
+    width: 45%;
+}
+
+.version {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+}

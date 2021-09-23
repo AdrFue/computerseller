@@ -1,0 +1,111 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://computerseller.adrianf.de/pc_icon.jpg">
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h1>Computer Seller</h1>
+    <h4>Player Level:&nbsp;<span id="playerLvl"></span></h4>
+    <br>
+    <button onclick="btnSellOne()">Sell one</button> Current Money:
+    <!--<input type="text" id="money" readonly></input>-->
+    <span id="money"></span>&nbsp;€
+    <br><br>
+
+    <h3>Statistics</h3>
+    You sell <span id="computerPerSecond"></span> Computers/s.
+    <br> You get <span id="computerWorth"></span>&nbsp;€/Computer.
+    <br><br> You earn <span id="earnings"></span>&nbsp;€/s.
+
+    <div id="wrap">
+        <div id="row-1">
+            <h3>Get Workers</h3>
+            Intern sells (0.1/s)&nbsp;&nbsp;&nbsp;&nbsp; Amount: <span id="internAmount"></span>
+            <br>
+            <button onclick="btnIntern()">Hire one (<span id="internPrice"></span>)</button>
+            <button onclick="btnInternTen()">Hire 10 (<span id="internPriceTen"></span>)</button>
+            <br><br> Holiday Worker sells (0.25/s)&nbsp;&nbsp;&nbsp;&nbsp; Amount: <span id="holidayWorkerAmount"></span>
+            <br>
+            <button onclick="btnHolidayWorker()">Hire one (<span id="holidayWorkerPrice"></span>)</button>
+            <button onclick="btnHolidayWorkerTen()">Hire 10 (<span id="holidayWorkerPriceTen"></span>)</button>
+            <br><br> Trainee sells (0.5/s)&nbsp;&nbsp;&nbsp;&nbsp; Amount: <span id="traineeAmount"></span>
+            <br>
+            <button onclick="btnTrainee()">Hire one (<span id="traineePrice"></span>)</button>
+            <button onclick="btnTraineeTen()">Hire 10 (<span id="traineePriceTen"></span>)</button>
+            <br><br> Junior Staff sells (1/s)&nbsp;&nbsp;&nbsp;&nbsp; Amount: <span id="juniorStaffAmount"></span>
+            <br>
+            <button onclick="btnJuniorStaff()">Hire one (<span id="juniorStaffPrice"></span>)</button>
+            <button onclick="btnJuniorStaffTen()">Hire 10 (<span id="juniorStaffPriceTen"></span>)</button>
+            <br><br> Remote Office sells (2/s)&nbsp;&nbsp;&nbsp;&nbsp; Amount: <span id="remoteOfficeAmount"></span>
+            <br>
+            <button onclick="btnRemoteOffice()">Hire one (<span id="remoteOfficePrice"></span>)</button>
+            <button onclick="btnRemoteOfficeTen()">Hire 10 (<span id="remoteOfficePriceTen"></span>)</button>
+            <br><br> Senior Staff sells (5/s)&nbsp;&nbsp;&nbsp;&nbsp; Amount: <span id="seniorStaffAmount"></span>
+            <br>
+            <button onclick="btnSeniorStaff()">Hire one (<span id="seniorStaffPrice"></span>)</button>
+            <button onclick="btnSeniorStaffTen()">Hire 10 (<span id="seniorStaffPriceTen"></span>)</button>
+            <br><br> Store sells (25/s)&nbsp;&nbsp;&nbsp;&nbsp; Amount: <span id="storeAmount"></span>
+            <br>
+            <button onclick="btnStore()">Hire one (<span id="storePrice"></span>)</button>
+            <button onclick="btnStoreTen()">Hire 10 (<span id="storePriceTen"></span>)</button>
+            <br><br> Shopping Center sells (100/s)&nbsp;&nbsp;&nbsp;&nbsp; Amount: <span id="shoppingCenterAmount"></span>
+            <br>
+            <button onclick="btnShoppingCenter()">Hire one (<span id="shoppingCenterPrice"></span>)</button>
+            <button onclick="btnShoppingCenterTen()">Hire 10 (<span id="shoppingCenterPriceTen"></span>)</button>
+            <br><br>
+        </div>
+
+        <!-- Platzhalter -->
+        <div id="row-2">&nbsp</div>
+
+        <div id="row-3">
+            <h3>Marketing</h3>
+            Flyers Lvl. <span id="flyersLvl"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="btnFlyers()"><span id="flyersPrice"></span>&nbsp;€</button>
+            <br> Sold Computers/s x1.5 xLvl.
+            <br><br> Website Lvl. <span id="websiteLvl"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="btnWebsite()"><span id="websitePrice"></span>&nbsp;€</button>
+            <br> Sold Computers/s x2 xLvl.
+            <br><br> Magazine Ad Lvl. <span id="magazineAdLvl"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="btnMagazineAd()"><span id="magazineAdPrice"></span>&nbsp;€</button>
+            <br> Sold Computers/s x3 xLvl.
+            <br><br> Online Ad Lvl. <span id="onlineAdLvl"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="btnOnlineAd()"><span id="onlineAdPrice"></span>&nbsp;€</button>
+            <br> Sold Computers/s x5 xLvl.
+            <br><br> Television Ad Lvl. <span id="tvAdLvl"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="btnTvAd()"><span id="tvAdPrice"></span>&nbsp;€</button>
+            <br> Sold Computers/s x9 xLvl.
+            <br>
+
+            <h3>Sell better Computers</h3>
+            Office-Computer (x<span id="officeComputerTimes"></span>)&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnOfficeComputer" onclick="btnOfficeComputer()"><span id="officeComputerPrice"></span></button>
+            <br> Smartphone (x<span id="smartphoneTimes"></span>)&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnSmartphone" onclick="btnSmartphone()"><span id="smartphonePrice"></span></button>
+            <br> Laptop (x<span id="laptopTimes"></span>)&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnLaptop" onclick="btnLaptop()"><span id="laptopPrice"></span></button>
+            <br> Gaming Computer (x<span id="gamingComputerTimes"></span>)&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnGamingComputer" onclick="btnGamingComputer()"><span id="gamingComputerPrice"></span></button>
+            <br> Server (x<span id="serverTimes"></span>)&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnServer" onclick="btnServer()"><span id="serverPrice"></span></button>
+            <br> Mainframe (x<span id="mainframeTimes"></span>)&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnMainframe" onclick="btnMainframe()"><span id="mainframePrice"></span></button>
+            <br> Super-Computer (x<span id="superComputerTimes"></span>)&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="btnSuperComputer" onclick="btnSuperComputer()"><span id="superComputerPrice"></span></button>
+        </div>
+
+    </div>
+
+    <div class="version"> &copy; 2017-2018 Version 1.1</div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script language="javascript" type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
